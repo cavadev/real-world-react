@@ -1,4 +1,6 @@
 import React from 'react';
+// BrowserRouter is to avoid error: not use <Link> outside a <Router>
+import { BrowserRouter } from 'react-router-dom';
 import { render } from 'react-testing-library';
 import { IntlProvider } from 'react-intl';
 
@@ -10,7 +12,9 @@ describe('<HomePage />', () => {
       container: { firstChild },
     } = render(
       <IntlProvider locale="en">
-        <HomePage />
+        <BrowserRouter>
+          <HomePage />
+        </BrowserRouter>
       </IntlProvider>,
     );
     expect(firstChild).toMatchSnapshot();

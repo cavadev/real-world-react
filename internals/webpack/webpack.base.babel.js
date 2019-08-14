@@ -113,6 +113,9 @@ module.exports = options => ({
     // drop any unreachable code.
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
+      BACKEND_URL: null,
+      FACEBOOK_APP_ID: null,
+      GOOGLE_APP_ID: null,
     }),
   ]),
   resolve: {

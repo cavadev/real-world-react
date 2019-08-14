@@ -8,3 +8,6 @@ stats.json
 .DS_Store
 npm-debug.log
 .idea
+
+# environment variables file only in local (dotenv || heroku local)
+.env

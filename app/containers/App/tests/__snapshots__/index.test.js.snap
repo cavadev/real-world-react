@@ -2,11 +2,25 @@
 
 exports[`<App /> should render and match the snapshot 1`] = `
 <div>
+  <Unknown />
+  <Memo(ConnectFunction) />
   <Switch>
     <Route
       component={[Function]}
       exact={true}
       path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/signup"
+    />
+    <Route
+      component={[Function]}
+      path="/login"
+    />
+    <Route
+      component={[Function]}
+      path="/account"
     />
     <Route
       component={[Function]}

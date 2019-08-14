@@ -15,6 +15,11 @@ module.exports = {
     node: true,
     es6: true,
   },
+  globals: {
+    'BACKEND_URL': 'readonly',
+    'FACEBOOK_APP_ID': 'readonly',
+    'GOOGLE_APP_ID': 'readonly',
+  },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
@@ -78,6 +83,7 @@ module.exports = {
     'redux-saga/no-yield-in-race': 2,
     'redux-saga/yield-effects': 2,
     'require-yield': 0,
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
   },
   settings: {
     'import/resolver': {

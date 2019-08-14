@@ -14,14 +14,23 @@ git clone https://github.com/cavadev/real-world-react.git
 cd real-world-react
 ```
 
-Then
+Then create the .env file (see .env.example)
+
+And finally
 
 ```sh
 npm install
-npm run start
+npm run start:local
 ```
 
-And finally access to the web in http://localhost:3000/
+Access to the web in http://localhost:3000/
+
+You can see the deployment version with:
+
+```sh
+npm run build:local
+```
+Preps your app for deployment (does not run tests). Optimizes and minifies all files, piping them to the build folder.
 
 ## React Boilerplate
 

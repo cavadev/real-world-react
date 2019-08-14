@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
+import throttle from 'lodash/throttle';
 
 // Import root app
 import App from 'containers/App';
@@ -28,14 +29,26 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
+import { loadState, saveState } from 'utils/localStorage';
 import configureStore from './configureStore';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
 
 // Create redux store with history
-const initialState = {};
+const initialState = loadState();
 const store = configureStore(initialState, history);
+
+// Redux: Persisting the State to the Local Storage
+store.subscribe(
+  throttle(() => {
+    saveState({
+      userSession: store.getState().userSession,
+      language: store.getState().language,
+    });
+  }, 1000),
+);
+
 const MOUNT_NODE = document.getElementById('app');
 
 const render = messages => {

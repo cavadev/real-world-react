@@ -1,0 +1,46 @@
+{
+  "app.containers.NotFoundPage.header": "Este es el contenedor para NotFoundPage!",
+
+  "app.containers.HomePage.header": "Este es el contenedor para HomePage!",
+  "app.containers.HomePage.boilerplate": "Ejemplo de un proyecto del mundo real con ReactJS. El primer commit de este proyecto fue construido con ",
+  "app.containers.HomePage.realWorld": "Puedes ver mas de este proyecto en ",
+  "app.containers.HomePage.account": "La siguiente página es solo visible para usuarios registrados: ",
+
+  "app.components.MainMenu.login": "login",
+  "app.components.MainMenu.signup": "crear cuenta",
+  "app.components.MainMenu.signout": "cerrar sesion",
+  "app.components.MainMenu.noAuthenticated": "No registrado",
+
+  "app.containers.LoginPage.header": "Este es el contenedor para LoginPage",
+  "app.containers.LoginPage.password": "Contraseña",
+  "app.containers.LoginPage.signup": "No tengo una cuenta",
+  "app.containers.LoginPage.login": "Ingresar",
+  "app.containers.LoginPage.stringMinError": "Texto muy corto",
+  "app.containers.LoginPage.stringMaxError": "Texto muy largo",
+  "app.containers.LoginPage.stringRequiredError": "Este campo es requerido",
+  "app.containers.LoginPage.stringEmailError": "Email no válido",
+  "app.containers.LoginPage.passwordMinError": "Contraseña muy corta, debe contener al menos 8 caracteres",
+  "app.containers.LoginPage.badCredentials": "El usuario o contraseña ingresada no corresponde a nuestros registros",
+  "app.containers.LoginPage.registeredWithOtherMethod": "Su correo ha sido utilizado anteriormente con un metodo diferente de login, por favor utilice su opcion usual de login.",
+
+  "app.containers.SignupPage.header": "Este es el contenedor para SignupPage",
+  "app.containers.SignupPage.firstName": "Nombres",
+  "app.containers.SignupPage.lastName": "Apellidos",
+  "app.containers.SignupPage.password": "Contraseña",
+  "app.containers.SignupPage.consent": "He leído los términos y condiciones",
+  "app.containers.SignupPage.createAccount": "Crear cuenta",
+  "app.containers.SignupPage.login": "Ya tengo una cuenta",
+  "app.containers.SignupPage.stringMinError": "Texto muy corto",
+  "app.containers.SignupPage.stringMaxError": "Texto muy largo",
+  "app.containers.SignupPage.stringRequiredError": "Este campo es requerido",
+  "app.containers.SignupPage.stringEmailError": "Email no válido",
+  "app.containers.SignupPage.passwordMinError": "Contraseña muy corta, debe contener al menos 8 caracteres",
+  "app.containers.SignupPage.passwordEqualError": "Las contraseñas ingresadas no coinciden",
+  "app.containers.SignupPage.consentError": "Debe aceptar los terminos y condiciones para crear una nueva cuenta.",
+
+  "app.containers.AccountPage.header": "Este es el contenedor para AccountPage",
+  "app.containers.AccountPage.body": "Estas viendo esta sección porque estas correctamente logueado.",
+
+  "boilerplate.containers.LocaleToggle.en": "en",
+  "boilerplate.containers.LocaleToggle.es": "es"
+}

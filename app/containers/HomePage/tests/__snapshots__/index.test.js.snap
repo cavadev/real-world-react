@@ -1,9 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomePage /> should render and match the snapshot 1`] = `
-<h1>
-  <span>
-    This is the HomePage container!
-  </span>
-</h1>
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 MuiCard-root Card__StyledCard-sc-1kvgq7c-0 iCqqgf MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+      >
+        <span>
+          This is the HomePage container!
+        </span>
+      </h2>
+      <p
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span>
+          Example of real world project with ReactJS. The first commit of this project was built with 
+        </span>
+        <a
+          href="https://github.com/react-boilerplate/react-boilerplate"
+          target="_blank"
+        >
+          [react-boilerplate]
+        </a>
+        .
+        <br />
+        <span>
+          The next page is only visible for logged users: 
+        </span>
+        <a
+          href="/account"
+        >
+           account
+        </a>
+      </p>
+    </div>
+    <div
+      class="MuiCardActions-root MuiCardActions-spacing"
+    >
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall"
+        href="https://github.com/cavadev/real-world-react"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Github
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </a>
+    </div>
+  </div>
+</div>
 `;

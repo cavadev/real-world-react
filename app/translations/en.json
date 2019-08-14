@@ -1,1 +1,18 @@
-[]
+{
+  "app.containers.HomePage.header": "This is the HomePage container!",
+  "app.containers.NotFoundPage.header": "This is the NotFoundPage container!",
+  "app.containers.SignupPage.consent": "I read the Terms and Conditions",
+  "app.containers.SignupPage.consentError": "You have to agree with our Terms and Conditions",
+  "app.containers.SignupPage.createAccount": "Create Account",
+  "app.containers.SignupPage.firstName": "First Name",
+  "app.containers.SignupPage.header": "This is the SignupPage container!",
+  "app.containers.SignupPage.lastName": "Last Name",
+  "app.containers.SignupPage.login": "I have an account",
+  "app.containers.SignupPage.password": "Password",
+  "app.containers.SignupPage.passwordEqualError": "Passwords are not the same!",
+  "app.containers.SignupPage.passwordMinError": "Password is too short - should be 8 chars minimum.",
+  "app.containers.SignupPage.stringEmailError": "Invalid email",
+  "app.containers.SignupPage.stringMaxError": "text too long!",
+  "app.containers.SignupPage.stringMinError": "text too short!",
+  "app.containers.SignupPage.stringRequiredError": "Required"
+}
