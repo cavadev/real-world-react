@@ -12,15 +12,21 @@ script:
   - npm test -- --maxWorkers=4
   - npm run build
 
-before_install:
-#  - export CHROME_BIN=chromium-browser
-#  - export DISPLAY=:99.0
+after_success:
+  - npm run coveralls
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api-key:
+    secure: $HEROKU_API_KEY
+  app:
+    master: real-world-react-prod
+    qa: real-world-react-qa
 
 notifications:
   email:
     on_failure: change
-
-after_success: 'npm run coveralls'
 
 cache:
   directories:

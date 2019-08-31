@@ -1,11 +1,11 @@
 Real World ReactJS
 ==================
-
+[![Build Status](https://travis-ci.org/cavadev/real-world-react.svg?branch=master)](https://travis-ci.org/cavadev/real-world-react)
 [![Built with](https://img.shields.io/badge/Build_with-react--boilerplate-F7B633.svg)](https://github.com/react-boilerplate/react-boilerplate)
 
 Example of a real world project with ReactJS. This project first commit was built with [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate).
 
-## Install
+## Local Development
 
 Clone the repo:
 
@@ -31,6 +31,53 @@ You can see the deployment version with:
 npm run build:local
 ```
 Preps your app for deployment (does not run tests). Optimizes and minifies all files, piping them to the build folder.
+
+## Continuous Deployment
+
+Deployment is automated via Travis. When builds pass on the master or qa branch, Travis will deploy that branch to Heroku. Follow these steps to enable this feature.
+
+Initialize the production server:
+
+```
+heroku create real-world-react-prod --remote prod && \
+    heroku addons:create newrelic:wayne --app real-world-react-prod && \
+    heroku config:set BACKEND_URL=`Add your backend url` \
+        FACEBOOK_APP_ID="Add the facebbok app id" \
+        GOOGLE_APP_ID="Add the google app id" \
+        --app real-world-react-prod
+```
+
+You can see the result in [https://real-world-react-prod.herokuapp.com](https://real-world-react-prod.herokuapp.com)
+
+Initialize the qa server:
+
+```
+heroku create real-world-react-qa --remote prod && \
+    heroku addons:create newrelic:wayne --app real-world-react-qa && \
+    heroku config:set BACKEND_URL=`Add your backend url` \
+        FACEBOOK_APP_ID="Add the facebbok app id" \
+        GOOGLE_APP_ID="Add the google app id" \
+        --app real-world-react-qa
+```
+
+You can see the result in [https://real-world-react-qa.herokuapp.com](https://real-world-react-qa.herokuapp.com)
+
+Securely add your Heroku credentials to Travis so that it can automatically deploy your changes (You can also edit project settings in the travis website for add a new environment variable):
+
+```bash
+travis encrypt HEROKU_API_KEY="add you heroku api key here" --add  && \
+travis encrypt HEROKU_AUTH_TOKEN="$(heroku auth:token)" --add
+```
+
+Commit your changes and push to master and qa to trigger your first deploys:
+
+```bash
+git commit -a -m "ci(travis): first deploy" && \
+git push origin master:qa && \
+git push origin master
+```
+
+You're now ready to continuously ship! ✨ 🛳
 
 ## React Boilerplate
 
